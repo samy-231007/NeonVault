@@ -1,0 +1,150 @@
+/* Statisches Neon-Design mit klaren Unterteilungen */
+body {
+    background-color: #0a0e2b;
+    color: #e0e7ff;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Container-Styles */
+.container {
+    max-width: 900px;
+}
+
+/* Abschnitts-Box */
+.section-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #00f7ff;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Abschnitts-Titel */
+.section-title {
+    color: #00f7ff;
+    text-shadow: 0 0 5px #00f7ff;
+}
+
+/* Trennlinie */
+.section-divider {
+    border-top: 1px solid #e91e63;
+    margin: 1rem 0;
+}
+
+/* Kategorie-Box */
+.category-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #e91e63;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+/* Score-Box */
+.score-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #e91e63;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Ergebnis-Box */
+.result-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #e91e63;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+/* Neon-Karte */
+.neon-card {
+    background: rgba(10, 14, 43, 0.7);
+    backdrop-filter: blur(10px);
+    border: 2px solid #e91e63;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 247, 255, 0.2);
+}
+
+/* Neon-Button */
+.btn-neon {
+    background-color: #00f7ff;
+    border: none;
+    color: #0a0e2b;
+    border-radius: 8px;
+}
+
+.btn-neon:hover {
+    background-color: #e91e63;
+    color: #e0e7ff;
+}
+
+/* Neon-Fortschrittsbalken */
+.neon-progress {
+    background: linear-gradient(90deg, #00f7ff, #e91e63);
+}
+
+/* Antwort-Buttons */
+.answer-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e0e7ff;
+    border: 1px solid #00f7ff;
+    border-radius: 8px;
+}
+
+.answer-btn:hover {
+    background: rgba(0, 247, 255, 0.3);
+    color: #e91e63;
+}
+
+.answer-btn.correct {
+    background: #28a745;
+    border-color: #28a745;
+    color: #fff;
+}
+
+.answer-btn.wrong {
+    background: #dc3545;
+    border-color: #dc3545;
+    color: #fff;
+}
+
+/* Neon-Auswahl */
+.neon-select {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e0e7ff;
+    border: 1px solid #00f7ff;
+    border-radius: 8px;
+}
+
+.neon-select:focus {
+    border-color: #e91e63;
+}
+
+/* Badges */
+.badge.bg-neon {
+    background: linear-gradient(45deg, #00f7ff, #e91e63);
+    color: #e0e7ff;
+    font-size: 1.2rem;
+}
+
+/* Fragentext und Fragentitel in Weiß */
+.card-text {
+    color: #ffffff;
+}
+
+.card-title {
+    color: #ffffff;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .btn-neon {
+        padding: 0.5rem 1rem;
+    }
+    .neon-card {
+        padding: 1rem;
+    }
+}

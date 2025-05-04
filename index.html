@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonVault Quiz</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts für Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Eigene Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container py-5">
+        <!-- Startseite -->
+        <div id="startScreen" class="section-box">
+            <h1 class="section-title">NeonVault Quiz</h1>
+            <hr class="section-divider">
+            <p>Test your knowledge in a futuristic challenge!</p>
+            <div class="category-box mb-4">
+                <label for="category" class="form-label">Choose a category:</label>
+                <select id="category" class="form-select neon-select">
+                    <option value="9">General Knowledge</option>
+                    <option value="17">Science & Nature</option>
+                    <option value="23">History</option>
+                </select>
+            </div>
+            <button id="startQuiz" class="btn btn-neon btn-lg">Start Quiz</button>
+        </div>
+
+        <!-- Quiz-Bereich -->
+        <div id="quizScreen" class="d-none section-box">
+            <h2 class="section-title">Quiz</h2>
+            <hr class="section-divider">
+            <div class="card neon-card">
+                <div class="card-body">
+                    <h5 class="card-title" id="questionNumber">Question 1</h5>
+                    <div class="progress mb-3">
+                        <div id="timerBar" class="progress-bar neon-progress" role="progressbar" style="width: 100%"></div>
+                    </div>
+                    <p id="questionText" class="card-text"></p>
+                    <div id="answers" class="d-grid gap-2"></div>
+                </div>
+            </div>
+            <div class="score-box mt-3">
+                <p>Score: <span id="score" class="badge bg-neon">0</span></p>
+            </div>
+        </div>
+
+        <!-- Ergebnis-Bereich -->
+        <div id="resultScreen" class="d-none section-box">
+            <h2 class="section-title">Results</h2>
+            <hr class="section-divider">
+            <div class="result-box">
+                <p>Your Score: <span id="finalScore" class="badge bg-neon"></span></p>
+                <p>Highscore: <span id="highScore" class="badge bg-neon"></span></p>
+            </div>
+            <canvas id="resultChart" class="mx-auto mb-3" style="max-width: 400px;"></canvas>
+            <canvas id="highScoreChart" class="mx-auto" style="max-width: 400px;"></canvas>
+            <button id="restartQuiz" class="btn btn-neon mt-3">New Quiz</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS und jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Eigene JavaScript -->
+    <script src="quiz.js"></script>
+</body>
+</html>
